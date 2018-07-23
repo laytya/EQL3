@@ -529,6 +529,8 @@ function EQL3_IsQuestWatched(questIndex)
 	local questName, level = GetQuestLogTitle(questIndex);
 	local questLogHeader, isHeader, tempId;
 	
+	if not questName then return false end
+	
 	isHeader = false;
 	tempId = questIndex;
 	while (not isHeader and tempId > 0) do
