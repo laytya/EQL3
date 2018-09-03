@@ -90,7 +90,7 @@ function EQL3_ScanTooltipItem(queryString)
 							-- DEFAULT_CHAT_FRAME:AddMessage("EQL: ".. y..", "..z, 1, 1, 1, 1);
 							
 							if ( QuestlogOptions[EQL3_Player].ShowQuestLevels == 1 ) then
-								if(questTag ~= NIL) then
+								if(questTag ~= nil) then
 									level = level.."+"
 								end
 								questTitle = "["..level.."] "..questTitle;

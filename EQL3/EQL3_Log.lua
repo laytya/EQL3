@@ -443,7 +443,7 @@ function QuestLog_Update()
 				
 				if(QuestlogOptions[EQL3_Player].ShowQuestLevels == 1) then
 					tempLevel = level;
-					if (questTag ~= NIL) then
+					if (questTag ~= nil) then
 						tempLevel = tempLevel.."+";
 					end
 					questLogTitle:SetText("  ".."["..tempLevel.."] "..questLogTitleText);
@@ -1059,7 +1059,7 @@ function GetQuestLogTitle(questIndex)
 		if ( not QuestLevel_Quest2Level[questLogTitleText] ) then
 			local queststorage = "";
 			queststorage = QuestLevel_StorageSet(queststorage, "levelmin", level);
-			if (questTag ~= NIL) then
+			if (questTag ~= nil) then
 				queststorage = QuestLevel_StorageSet(queststorage, "elite", "x");
 			end
 			QuestLevel_Quest2Level[questLogTitleText] = queststorage;
@@ -1079,7 +1079,7 @@ function GetQuestLogTitle(questIndex)
 			if (levelmax < level) then
 				queststorage = QuestLevel_StorageSet(queststorage, "levelmax", level);
 			end
-			if (questTag ~= NIL and QuestLevel_StorageGet(queststorage, "elite") == nil) then
+			if (questTag ~= nil and QuestLevel_StorageGet(queststorage, "elite") == nil) then
 				queststorage = QuestLevel_StorageSet(queststorage, "elite", "");
 			end
 			QuestLevel_Quest2Level[questLogTitleText] = queststorage;
